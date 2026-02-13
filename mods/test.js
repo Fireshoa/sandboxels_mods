@@ -1,6 +1,10 @@
 elements.black_matter = {
     color: "#000000",
-    behavior: behaviors.GAS,
+    behavior: [
+        "XX|M1 AND DL%5|XX",
+        "M1 AND DL%5|XX|M1 AND DL%5",
+        "XX|M1 AND DL%5|XX"
+    ],
     category: "special",
     temp: 5000,
     tempLow: 90,
@@ -11,7 +15,11 @@ elements.black_matter = {
 
 elements.white_matter = {
     color: "#ffffff",
-    behavior: behaviors.POWDER,
+    behavior: [
+        "M2|DL%5|M2",
+        "DL%5|XX|DL%5",
+        "XX|M1 AND DL%5|XX"
+    ],
     category: "special",
     temp: 50,
     tempHigh: 110,
