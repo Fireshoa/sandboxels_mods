@@ -1,28 +1,22 @@
-console.log("Hello, World!")
+console.log("Black/White Matter mod loading...");
 
 elements.black_matter = {
     color: "#000000",
-    behavior: [
-        "XX|M1 AND DL|XX",
-        "M1 AND DL|XX|M1 AND DL",
-        "XX|M1 AND DL|XX"
-    ],
+    behavior: behaviors.GAS, // Standard gas behavior
     category: "special",
     temp: 5000,
     tempLow: 90,
     state: "gas",
-    stateLow: "white_matter"
-}
+    stateLow: "white_matter",
+    excludeRandom: true
+};
 
 elements.white_matter = {
-    color: "#000000",
-    behavior: [
-        "XX|DL|XX",
-        "DL|XX|DL",
-        "M2|M1 AND DL|M2"
-    ],
+    color: "#ffffff", // Changed to white so it's visible
+    behavior: behaviors.POWDER, // Standard powder behavior
     category: "special",
-    temp: 5000,
+    temp: 50,
     tempHigh: 110,
-    stateHigh: "black_matter"
-}
+    stateHigh: "black_matter",
+    excludeRandom: true
+};
